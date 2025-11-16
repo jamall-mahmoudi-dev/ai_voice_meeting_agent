@@ -2,7 +2,7 @@ import openai
 from config import OPENAI_API_KEY
 
 openai.api_key = OPENAI_API_KEY
-
+# change file for test
 def summarize_meeting(text: str) -> str:
     prompt = f"خلاصه نکات کلیدی جلسه زیر را به فارسی یا انگلیسی استخراج کن:\n{text}"
     response = openai.ChatCompletion.create(

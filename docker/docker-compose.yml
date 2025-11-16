@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  voice-ai-agent:
+    build: ./docker
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./audio:/app/audio
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
